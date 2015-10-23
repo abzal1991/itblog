@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <title>Enter - ITBLOG.kz</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link href="../../web/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+    <div class="vp-wrapper">
+
+        <div class="vp-middle">
+
+            <div class="vp-container">
+                <div class="vp-content">
+                    <a href="">ITBLOG.kz</a>
+                    <main class="vp-main-place" data-include="../layouts/enter.html">
+                        
+                    </main>
+                </div><!-- .content -->
+            </div><!-- .container-->
+
+            <aside class="vp-right-sidebar">
+                <div class="vp-enter-n-profile">
+                    <a href="./enter.html" class="vp-button vp-button-enter">Войти</a>
+                    <div class="vp-sidebar-place" data-include="
+                        ../layouts/right-sidebar/search.html,
+                        ../layouts/right-sidebar/button-newpoll.html,
+                        ../layouts/right-sidebar/comment-of-day.html,
+                        ../layouts/right-sidebar/categories.html
+                        ">
+                    </div>
+                </div>
+            </aside><!-- .right-sidebar -->
+
+        </div><!-- .middle-->
+
+    </div><!-- .wrapper -->
+
+    <footer class="vp-footer">
+        <div class="vp-counter"></div>
+    </footer><!-- .footer -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../../web/js/main.js"></script>
+    <script src="../../web/js/loader.js"></script>
+    </body>
+</html>
