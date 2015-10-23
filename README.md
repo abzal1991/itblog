@@ -1,2 +1,2 @@
 # itblog
-Kazakh IT Blog
+Kazakh IT Blog. 
