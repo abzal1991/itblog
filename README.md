@@ -1,0 +1,2 @@
+# itblog
+Kazakh IT Blog
