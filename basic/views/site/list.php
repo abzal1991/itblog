@@ -1,6 +1,6 @@
 <div class="vp-poll-list-header">
-    <a href="#" class="active">Танымал</a>
-    <a href="#">Жаңа</a>
+    <a href="#" class="active">Жаңа</a>
+    <a href="#">Танымал</a>
     <a href="#">Талқыланып жатқан</a>
     <strong></strong>
 </div>
