@@ -5,7 +5,6 @@ namespace app\controllers;
 use Yii;
 use app\models\Topic;
 use app\models\TopicContent;
-use app\models\Comment;
 use app\models\TopicSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -35,7 +34,7 @@ class TopicController extends Controller
      */
 	public function actionList(){
 	
-		$query = Topic::find()->joinWith('topicContent')->joinWith('comment', true, 'LEFT JOIN');
+		$query = Topic::find()->joinWith('topicContent');
 		
 		$countQuery = clone $query;
 		

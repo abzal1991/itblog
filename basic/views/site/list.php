@@ -5,7 +5,7 @@
     <strong></strong>
 </div>
 <div class="vp-poll-list">
-    <div class="container">
+    <div class="vp-container">
         <?php
         use yii\helpers\Html;
         use yii\widgets\LinkPager;
@@ -23,4 +23,3 @@
         ?>
     </div>
 </div>
-<div data-include="../views/layouts/loader.html"></div>

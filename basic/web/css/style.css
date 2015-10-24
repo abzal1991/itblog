@@ -117,7 +117,7 @@ a {
 .vp-content > a {
     display: block;
     padding: 15px 0 15px 70px;
-    height: 30px;
+    height: 55px;
     color: #19343f;
     font-size: 30px;
     line-height: 30px;
@@ -314,7 +314,7 @@ a {
     position: absolute;
     right: 0;
     top: 0;
-    width: 85px;
+    width: 105px;
     height: 55px;
 }
 .vp-poll-list-item .vp-header .vp-time-n-share > span {
@@ -363,6 +363,11 @@ a {
 .vp-poll-list-item .vp-answers {
     padding: 10px;
 }
+
+.vp-poll-list-item .vp-answers > div{
+    width: 50%;
+}
+
 .vp-poll-list-item .vp-answers > li {
     margin: 15px 0 0 0;
     font-size: 15px;

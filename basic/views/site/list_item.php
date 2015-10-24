@@ -18,7 +18,7 @@
         </div>
         <div class="vp-time-n-share">
             <span><?=$model->topic_date_edit?></span>
-            <a href="#" id="vp-share-more">Еще</a>
+            <a href="#" id="vp-share-more">Тағы</a>
         </div>
     </div>
     <div class="vp-question">

@@ -174,7 +174,7 @@ class Topic extends \yii\db\ActiveRecord
         return $this->hasMany(PreTopicTag::className(), ['topic_id' => 'topic_id']);
     }
 	
-	public function getComment()
+	public function getComments()
     {
         return $this->hasMany(Comment::className(), ['target_id' => 'topic_id'])->where(['target_type'=>'topic']);
     }
