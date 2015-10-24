@@ -1,20 +1,38 @@
-<article>
-<h2>
-	<a href=''><?=$model->topic_title?></a>
-</h2>
-<div>categories, groups</div>
-<div class="vp-answers">
-	<?=$model->topicContent->topic_text_short ?>
+<div class="vp-poll-list-item">
+    <div class="vp-header">
+        <div class="vp-like">
+            <div class="vp-like-counter"><?=$model->topic_count_vote?></div>
+            <div class="vp-like-buttons">
+                <a href="#" class="vp-like-up"></a>
+                <a href="#" class="vp-like-dn"></a>
+            </div>
+            <div class="vp-like-icon"></div>
+        </div>
+        <div class="vp-author">
+            <div class="vp-photo">
+                <div></div>
+            </div>
+            <strong><?=$model->user->user_profile_name?></strong>
+            <br>
+            <span><?=$model->user->user_skill?></span>
+        </div>
+        <div class="vp-time-n-share">
+            <span><?=$model->topic_date_edit?></span>
+            <a href="#" id="vp-share-more">Тағы</a>
+        </div>
+    </div>
+    <div class="vp-question">
+        <h3><?=$model->topic_title?></h3>
+
+    </div>
+    <div>
+        <?=$model->topicContent->topic_text_short ?>
+    </div>
+     <div class="vp-revote-n-comment">
+        <a href="./comment.html" class="vp-comment-link">
+            <strong></strong>
+            <span><?=count($model->comments) ?></span>
+            комментировать
+        </a>
+    </div>
 </div>
-</article>
-<footer>
-author, view count
-
-<?=count($model->comments) ?>
-
-<?
-
-
-
-?>
-</footer>

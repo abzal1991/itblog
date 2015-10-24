@@ -51,11 +51,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-
-
-
         $query = Topic::find()->joinWith('topicContent')->joinWith('user');
-
 
         $countQuery = clone $query;
 
