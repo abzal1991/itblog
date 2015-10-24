@@ -1,56 +1,52 @@
-<?php
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <title>ITBLOG.kz</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link href="css/style.css" rel="stylesheet">
+    </head>
 
-use yii\helpers\Html;
-use yii\grid\GridView;
+    <body>
 
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\TopicSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+    <div class="vp-wrapper">
 
-$this->title = Yii::t('app', 'Topics');
-$this->params['breadcrumbs'][] = $this->title;
-?>
-<div class="topic-index">
+        <div class="vp-middle">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+            <div class="vp-container">
+                <div class="vp-content">
+                    <a href="./">ITBLOG.kz</a>
+                    <main class="vp-main-place">
+                      <?php  echo $this->render('list', ['models'=> $models, 'pages'=>$pages]);?>
 
-    <p>
-        <?= Html::a(Yii::t('app', 'Create Topic'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+                    </main>
+                </div><!-- .content -->
+            </div><!-- .container-->
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            <aside class="vp-right-sidebar">
+                <div class="vp-enter-n-profile">
+                    <a href="../views/site/enter.html" class="vp-button vp-button-enter">Кіру</a>
+                    <div class="vp-sidebar-place" data-include="
+                        ../views/layouts/right-sidebar/search.html,
+                        ../views/layouts/right-sidebar/button-newpoll.html,
+                        ../views/layouts/right-sidebar/comment-of-day.html,
+                        ../views/layouts/right-sidebar/categories.html
+                        ">
+                    </div>
+                </div>
+            </aside><!-- .right-sidebar -->
 
-            'topic_id',
-            'blog_id',
-            'user_id',
-            'topic_type',
-            'topic_title',
-            // 'topic_tags',
-            // 'topic_date_add',
-            // 'topic_date_edit',
-            // 'topic_user_ip',
-            // 'topic_publish',
-            // 'topic_publish_draft',
-            // 'topic_publish_index',
-            // 'topic_rating',
-            // 'topic_count_vote',
-            // 'topic_count_vote_up',
-            // 'topic_count_vote_down',
-            // 'topic_count_vote_abstain',
-            // 'topic_count_read',
-            // 'topic_count_comment',
-            // 'topic_count_favourite',
-            // 'topic_cut_text',
-            // 'topic_forbid_comment',
-            // 'topic_text_hash',
+        </div><!-- .middle-->
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+    </div><!-- .wrapper -->
 
-</div>
+    <footer class="vp-footer">
+        <div class="vp-counter"></div>
+    </footer><!-- .footer -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/loader.js"></script>
+    </body>
+</html>

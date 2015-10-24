@@ -51,8 +51,8 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-
         $query = Topic::find()->joinWith('topicContent')->joinWith('user')->orderBy('topic_date_add DESC');
+
 
         $countQuery = clone $query;
 
