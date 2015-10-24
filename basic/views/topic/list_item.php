@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="vp-question">
-        <h3><?=$model->topic_title?></h3>
+        <h3><a href='?r=topic/view&id=<?=$model->topic_id?>'><?=$model->topic_title?></a></h3>
 
     </div>
     <div>
