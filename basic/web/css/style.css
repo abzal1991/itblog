@@ -67,7 +67,7 @@ a {
     text-decoration: none;  
 }
 .vp-wrapper {
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
     min-height: 100%;
@@ -93,7 +93,7 @@ a {
 }
 .vp-right-sidebar {
     float: left;
-    width: 300px;
+    width: 280px;
     margin-left: -300px;
     padding: 20px 0 30px 0;
     position: relative;
