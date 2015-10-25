@@ -13,6 +13,7 @@ use yii\data\Pagination;
 
 class SiteController extends Controller
 {
+    public $layout = 'main';
     public function behaviors()
     {
         return [

@@ -28,6 +28,7 @@
     <div>
         <?=$model->topicContent->topic_text_short ?>
     </div>
+    <br/>
      <div class="vp-revote-n-comment">
         <a href="./comment.html" class="vp-comment-link">
             <strong></strong>
