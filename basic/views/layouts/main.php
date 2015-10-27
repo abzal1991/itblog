@@ -15,7 +15,7 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <?= Html::csrfMetaTags() ?>
@@ -28,24 +28,24 @@ AppAsset::register($this);
     <div class="row">
 
 
-    <div id="content" class="col-md-9">
-        <?php echo $content ?>
-    </div>
+        <div id="content" class="col-md-9">
+            <?php echo $content ?>
+        </div>
 
-<div class="col-md-3">
-    <aside class="vp-right-sidebar">
-        <div class="vp-enter-n-profile">
-            <a href="../views/site/enter.html" class="vp-button vp-button-enter">Кіру</a>
-            <div class="vp-sidebar-place" data-include="
+        <div class="col-md-3">
+            <aside class="vp-right-sidebar">
+                <div class="vp-enter-n-profile">
+                    <a href="../views/site/enter.html" class="vp-button vp-button-enter">Log in</a>
+                    <div class="vp-sidebar-place" data-include="
                             <?php Yii::$app->request->baseUrl;?>/basic/views/layouts/right-sidebar/search.html,
                             <?php Yii::$app->request->baseUrl;?>/basic/views/layouts/right-sidebar/button-newpoll.html,
                             <?php Yii::$app->request->baseUrl; ?>/basic/views/layouts/right-sidebar/comment-of-day.html,
                             <?php Yii::$app->request->baseUrl; ?>/basic/views/layouts/right-sidebar/categories.html
                             ">
-            </div>
+                    </div>
+                </div>
+            </aside><!-- .right-sidebar -->
         </div>
-    </aside><!-- .right-sidebar -->
-    </div>
     </div>
 </div>
 

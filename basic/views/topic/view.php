@@ -28,11 +28,23 @@
     <div>
         <?=$model->topicContent->topic_text ?>
     </div>
+    <br/>
+    <br/>
+    <br/>
      <div class="vp-revote-n-comment">
-        <a href="./comment.html" class="vp-comment-link">
-            <strong></strong>
-            <span><?=count($model->comments) ?></span>
-            комментировать
-        </a>
-    </div>
+
+             <div class="vp-comment-add">
+                 <textarea rows="5"></textarea>
+                 <button type="submit" class="vp-button">Добавить комментарий</button>
+             </div>
+             <ul class="vp-comments">
+                <?php foreach ($model->comments as $comment) {
+                 //echo $model->topic_title."</br>";
+                 echo $this->render('list_comment', ['model'=> $comment]);
+                 }
+                ?>
+
+             </ul>
+         </div>
+
 </div>

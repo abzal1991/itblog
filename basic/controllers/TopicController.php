@@ -61,6 +61,35 @@ class TopicController extends Controller
 		
 	}
 
+    public function actionListComment($id){
+
+        $query = Comment::find()->joinWith('topicContent');
+
+        $countQuery = clone $query;
+
+        $pages = new Pagination(['totalCount' => $countQuery->count()]);
+
+        $page=1;
+
+        if(isset($_GET["page"])) $page=$_GET["page"];
+
+        $limit = 10;
+        $offset = $limit*($page-1);
+        $pageSize = ceil($countQuery->count()/$limit);
+        $pages->setPageSize($pageSize);
+
+        $models = $query->offset($offset)
+            ->limit($limit)
+            ->all();
+
+        return $this->render('list', [
+            'models' => $models,
+            'pages' => $pages,
+        ]);
+
+
+    }
+
     /**
      * Lists all Topic models.
      * @return mixed
