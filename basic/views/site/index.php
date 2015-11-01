@@ -1,3 +1,6 @@
+<?php
+use app\components\SubscribeWidget;
+ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +9,7 @@
         <title>ITBLOG.kz</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
-
+        
     </head>
 
     <body>
@@ -17,7 +20,11 @@
 
             <div class="vp-container">
                 <div class="vp-content">
+                    <?=SubscribeWidget::widget() ?>
+                </div>
+                <div class="vp-content">
                     <a href="./">ITBLOG.kz</a>
+
                     <main class="vp-main-place">
                       <?php  echo $this->render('list', ['models'=> $models, 'pages'=>$pages]);?>
 
