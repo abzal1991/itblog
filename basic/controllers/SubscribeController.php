@@ -120,12 +120,47 @@ class SubscribeController extends Controller
     }
 
     public function actionCreateForNews(){
-        if(isset($_POST['Subscribe'])&&Yii::$app->request->isAjax){
-            $model->attributes = $_POST['Subscribe'];
-            $obj->target_type='news';
-            $obj->date_add="31-10-2015";
-            $obj->ip="218.20.23.21";
-            $obj->save();
-        }   
+        if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+            $mail = $data["email"];
+            if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+                return "<span class='error'>Невалидный формат e-mail</span>";
+            }else{
+                $old =Subscribe::find()->where(['target_type'=>'new_topics', 'mail'=>$mail])->one();
+                if($old==null) {
+                    $obj = new Subscribe();
+                    $obj->mail = $mail;
+                    $obj->target_type="new_topics";
+                    $obj->date_add = date('Y-m-d H:i:s');
+                    $obj->ip = $this->get_client_ip();
+                    $obj->status=1;
+                    if($obj->save()){
+                        return "<span class='success'>Вы успешны подписаны</span>";
+                    }
+                    return "<span class='error'>Ошибка..(</span>";
+                }else{
+                    return "<span class='error'>Этот адрес уже подписан</span>";
+                }
+            }   
+        }
+    }
+    
+    function get_client_ip() {
+        $ipaddress = '';
+        if (getenv('HTTP_CLIENT_IP'))
+            $ipaddress = getenv('HTTP_CLIENT_IP');
+        else if(getenv('HTTP_X_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+        else if(getenv('HTTP_X_FORWARDED'))
+            $ipaddress = getenv('HTTP_X_FORWARDED');
+        else if(getenv('HTTP_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_FORWARDED_FOR');
+        else if(getenv('HTTP_FORWARDED'))
+        $ipaddress = getenv('HTTP_FORWARDED');
+        else if(getenv('REMOTE_ADDR'))
+            $ipaddress = getenv('REMOTE_ADDR');
+        else
+            $ipaddress = 'UNKNOWN';
+        return $ipaddress;
     }
 }
