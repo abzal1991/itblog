@@ -17,7 +17,7 @@
 
             <div class="vp-container">
                 <div class="vp-content">
-                    <a href="./">ITBLOG.kz</a>
+
                     <main class="vp-main-place">
                       <?php  echo $this->render('list', ['models'=> $models, 'pages'=>$pages]);?>
 

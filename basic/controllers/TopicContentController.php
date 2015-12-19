@@ -62,9 +62,18 @@ class TopicContentController extends Controller
     {
         $model = new TopicContent();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->topic_id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->topic_text_source='source';
+            $model->topic_extra='extra';
+            if($model->save()){
+                return $this->redirect('?r=topic/view&id='.$model->topic_id);
+            }
+            else{
+                var_dump($model->errors);
+            }
+
         } else {
+            $model->topic_id=$_GET['topic_id'];;
             return $this->render('create', [
                 'model' => $model,
             ]);

@@ -144,9 +144,20 @@ class TopicController extends Controller
     {
         $model = new Topic();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->save();
-            return $this->redirect('topic-content/create');
+        if ($model->load(Yii::$app->request->post())) {
+            $model->blog_id=2;
+            $model->user_id=2;
+            $model->topic_date_add=date("Y-m-d H:i:s");
+            $model->topic_user_ip=$_SERVER['REMOTE_ADDR'];
+            $model->topic_text_hash='0';
+            if($model->save()){
+                return $this->redirect('?r=topic-content/create&topic_id='.$model->topic_id);
+            }
+            else{
+                var_dump($model->errors);
+            }
+
+
         } else {
             return $this->render('create', [
                 'model' => $model

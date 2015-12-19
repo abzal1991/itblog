@@ -17,8 +17,7 @@
             <span><?=$model->user->user_skill?></span>
         </div>
         <div class="vp-time-n-share">
-            <span><?=$model->topic_date_edit?></span>
-            <a href="#" id="vp-share-more">Тағы</a>
+            <span><?=$model->topic_date_add?></span>
         </div>
     </div>
     <div class="vp-question">

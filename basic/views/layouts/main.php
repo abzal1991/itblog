@@ -24,7 +24,8 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div class="container" style="width: 80%">
+<div class="container vp-content" style="width: 80%">
+    <a href="./">ITBlog.kz</a>
     <div class="row">
 
 

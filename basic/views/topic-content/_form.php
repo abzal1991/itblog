@@ -12,17 +12,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'topic_id')->textInput(['maxlength' => true]) ?>
+    <?= Html::activeHiddenInput($model, 'topic_id') ?>
 
     <?= $form->field($model, 'topic_text')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'topic_text_short')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'topic_text_source')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'topic_extra')->textarea(['rows' => 6]) ?>
-
-    <div class="form-group">
+   <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
