@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\TopicContent */
@@ -14,7 +15,11 @@ use yii\widgets\ActiveForm;
 
     <?= Html::activeHiddenInput($model, 'topic_id') ?>
 
-    <?= $form->field($model, 'topic_text')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'topic_text')->widget(CKEditor::className(), [
+        'options' => ['rows' => 6],
+        'preset' => 'full'
+    ]) ?>
 
     <?= $form->field($model, 'topic_text_short')->textarea(['rows' => 6]) ?>
 
