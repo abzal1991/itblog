@@ -110,6 +110,29 @@ a {
 .vp-content {
     padding: 15px 0px 30px 0;
 }
+
+.vp-topic-content{
+    line-height: 150%;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.vp-topic-content > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.prettyprint {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+}
+
 .vp-content > a {
     display: block;
     padding: 15px 0px 25px 80px;

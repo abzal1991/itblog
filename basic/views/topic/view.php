@@ -24,7 +24,7 @@
         <h3><a href='?r=topic/view&id=<?=$model->topic_id?>'><?=$model->topic_title?></a></h3>
 
     </div>
-    <div>
+    <div class="vp-topic-content">
         <?=$model->topicContent->topic_text ?>
     </div>
     <br/>
