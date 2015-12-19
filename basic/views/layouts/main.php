@@ -35,7 +35,7 @@ AppAsset::register($this);
         <div class="col-md-3">
             <aside class="vp-right-sidebar">
                 <div class="vp-enter-n-profile">
-                    <a href="../views/site/enter.html" class="vp-button vp-button-enter">Log in</a>
+                    <a href="../views/site/enter.html" class="vp-button vp-button-enter">Кіру</a>
                     <div class="vp-sidebar-place" data-include="
                             <?php Yii::$app->request->baseUrl;?>/basic/views/layouts/right-sidebar/search.html,
                             <?php Yii::$app->request->baseUrl;?>/basic/views/layouts/right-sidebar/button-newpoll.html,

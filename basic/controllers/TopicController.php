@@ -145,10 +145,11 @@ class TopicController extends Controller
         $model = new Topic();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->topic_id]);
+            $model->save();
+            return $this->redirect('topic-content/create');
         } else {
             return $this->render('create', [
-                'model' => $model,
+                'model' => $model
             ]);
         }
     }

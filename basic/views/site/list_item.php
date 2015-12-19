@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="vp-question">
-        <h3><?=$model->topic_title?></h3>
+        <h3><a href='?r=topic/view&id=<?=$model->topic_id?>'><?=$model->topic_title?></a></h3>
 
     </div>
     <div>
@@ -30,7 +30,7 @@
     </div>
     <br/>
      <div class="vp-revote-n-comment">
-        <a href="./comment.html" class="vp-comment-link">
+        <a href="?r=comment/index" class="vp-comment-link">
             <strong></strong>
             <span><?=count($model->comments) ?></span>
             комментировать
